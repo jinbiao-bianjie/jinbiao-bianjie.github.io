@@ -12,6 +12,6 @@ git add -A
 
 git commit -m 'deploy'
 
-git push -f git@github.com:jinbiao-bianjie/jinbiao-bianjie.github.io.git master
+git push -f git@github.com:jinbiao-bianjie/blog.git master:gh-pages
 
 cd -
