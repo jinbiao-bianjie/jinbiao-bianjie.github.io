@@ -4,7 +4,7 @@
 module.exports = {
 	title: 'IRIS',
 	description: 'Just playing around',
-	base: '/',
+	base: '/blog/',
 	locales: {
 		'/': {
 			lang: 'English', // 将会被设置为 <html> 的 lang 属性
