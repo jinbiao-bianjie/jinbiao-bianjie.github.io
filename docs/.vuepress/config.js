@@ -27,14 +27,14 @@ module.exports = {
 				selectText: 'Languages',
 				nav:[
 					{text:'Home',link:'/'},
-					{text:'news',link:'/test/'},
+					{text:'news',link:'/TEST/'},
 				]
 			},
 			'/zh/': {
 				selectText: '选择语言',
 				nav:[
 					{text:'首页',link:'/'},
-					{text:'动态资讯',link:'/zh/test/'},
+					{text:'动态资讯',link:'/zh/TEST/'},
 				]
 			}
 		}
