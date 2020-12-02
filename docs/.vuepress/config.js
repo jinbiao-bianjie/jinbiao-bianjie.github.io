@@ -4,7 +4,7 @@
 module.exports = {
 	title: 'IRIS',
 	description: 'Just playing around',
-	base: '/blog/',
+	base:'/blog/',
 	locales: {
 		'/': {
 			lang: 'English', // 将会被设置为 <html> 的 lang 属性
@@ -20,7 +20,7 @@ module.exports = {
 			description: 'Vue 驱动的静态网站生成器'
 		}
 	},
-
+	
 	themeConfig: {
 		locales: {
 			'/': {

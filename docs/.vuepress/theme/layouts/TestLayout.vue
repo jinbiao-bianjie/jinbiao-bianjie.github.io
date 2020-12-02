@@ -7,9 +7,26 @@
 				<Content class="title" slot-key="title"/>
 			</div>
 		</div>
-		<div class="content_container">
-			<Content/>
+		<div class="layout_news_list_container">
+			<ul class="layout_news_list_content_wrap">
+				<li class="layout_news_item_content" v-for="(item,index) in newsListData">
+					<div class="news_left_content">
+						<div class="news_left_top_content">
+							<div class="news_left_top_month_content">{{item.month}}</div>
+							<div class="news_left_top_day_content">{{item.day}}</div>
+						</div>
+						<div class="news_left_bottom_content">{{item.year}}</div>
+					</div>
+					<div class="news_right_content">
+						<div class="news_right_top_content"><a :href="item.link" target="_blank" rel="noopener noreferrer">{{item.title}}</a></div>
+						<div class="news_right_bottom_content">{{item.details}}</div>
+					</div>
+				</li>
+			</ul>
 		</div>
+		<!--<div class="content_container">
+			<Content/>
+		</div>-->
 	</div>
 </template>
 
@@ -21,14 +38,13 @@
 		components: {Navbar},
 		data () {
 			return {
-			
+				newsList: []
 			}
 		},
-		mounted(){
-			console.log(this.$page)
-		},
 		computed: {
-			
+			newsListData(){
+				return this.$page.frontmatter.features
+			},
 			shouldShowNavbar () {
 				const { themeConfig } = this.$site
 				const { frontmatter } = this.$page
@@ -108,4 +124,72 @@
 		margin 0 auto
 		padding-bottom 60px
 	}
+	.layout_news_list_container{
+		width 100%
+		margin-top 40px
+		.layout_news_list_content_wrap{
+			display flex
+			flex-wrap wrap
+			max-width 1200px
+			margin 0 auto
+			list-style none
+			.layout_news_item_content{
+				box-sizing border-box
+				max-width 525px
+				margin 0 20px 40px 20px
+				display flex
+				.news_left_content{
+					min-width 62px
+					text-align center
+					margin-right 50px
+					.news_left_top_content{
+						background url("../public/news_month_day_bg.png") no-repeat center center
+						background-size cover
+						.news_left_top_month_content{
+							font-size 15px
+							color #ffffff
+							padding-top 8px
+						}
+						.news_left_top_day_content{
+							font-size 24px
+							color #ffffff
+						}
+					}
+					.news_left_bottom_content{
+						background #0b243e
+						height: 60px
+						line-height 60px
+						color #ffffff
+						margin-top 1px
+						font-size 15px
+					}
+				}
+				.news_right_content{
+					flex 1
+					overflow hidden
+					.news_right_top_content{
+						overflow hidden
+						text-overflow ellipsis
+						white-space nowrap
+						a{
+							width 100%
+							color #0054E3
+							font-weight 700
+						}
+					}
+					.news_right_bottom_content{
+						margin-top 24px
+						text-indent 30px
+						font-size 14px
+						color #696e75
+						line-height 28px
+						text-align justify
+						overflow hidden
+					}
+				}
+			}
+		}
+	}
+	
+	
 </style>

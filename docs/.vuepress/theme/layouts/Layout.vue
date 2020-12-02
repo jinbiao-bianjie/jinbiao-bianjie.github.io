@@ -116,16 +116,6 @@ export default {
   },
 
   mounted () {
-    console.log(window.location.href,"????")
-    console.log(window.navigator.language)
-    /*if(window.navigator.language === 'zh-CN'){
-      if(window.location.href.indexOf('/zh/') === -1){
-        let uri = `${window.location.href}zh/`
-        window.location.replace(uri)
-      }
-    }else {
-      // window.location.replace(window.location.href)
-    }*/
     this.$router.afterEach(() => {
       this.isSidebarOpen = false
     })
