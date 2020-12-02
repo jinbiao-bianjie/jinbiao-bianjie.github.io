@@ -26,6 +26,12 @@ features:
   month: Sep
   day: 30
   details: 边界智能获授江西移动 BSN「金牌合作伙伴」，联合创始人曹恒发表主题为《IRITA Hub：新基建中的跨链服务枢纽——打造 BSN 支持隐私保护的跨链服务基础设施》的演讲。
+- title: 边界智能与中诚区块链研究院达成战略合作
+  link: https://mp.weixin.qq.com/s/t-VkHcTWrvmr0jNaO__uuQ
+  year: 2020
+  month: Sep
+  day: 15
+  details: 边界智能与中诚区块链研究院建立了战略合作关系，将聚焦区块链“产、学、研”领域，将围绕央行数字货币（CBDC），证券化通证发行（STO），大数据，以及企业区块链应用等方面展开合作。
 ---
 
 ::: slot title
