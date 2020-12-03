@@ -116,6 +116,10 @@
 			if (swiper) {
 				swiper.style.alignItems = 'center';
 			}
+			import('vue-awesome-swiper').then(module => {
+				console.log(module,"引入模块数据")
+				this.swiperComponents = module.default
+			})
 			console.log(swiper,">>>>>>>>")
 			console.log(this,"！！！")
 			console.log(this.$frontmatter,">>>>>>>>")
@@ -124,9 +128,6 @@
 		computed: {
 			newsListData(){
 				return this.$page.frontmatter.features
-			},
-			swiperArray(){
-				return this.$frontmatter.swiper
 			},
 			shouldShowNavbar () {
 				const { themeConfig } = this.$site

@@ -1,7 +1,7 @@
 module.exports = {
 	title: 'IRIS',
 	description: 'Just playing around',
-	base:'/',
+	base:'/blog/',
 	head:[
 		['link', { rel: 'icon', href: '/favicon.ico' }]
 	],
@@ -22,8 +22,7 @@ module.exports = {
 	},
 	
 	themeConfig: {
-		logo:"/assets/img/information.svg",
-		
+		logo:"/logo.png",
 		locales: {
 			'/': {
 				selectText: 'Languages',

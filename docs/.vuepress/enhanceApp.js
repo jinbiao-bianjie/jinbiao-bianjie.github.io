@@ -1,6 +1,19 @@
-const VueAwesomeSwiper = require('vue-awesome-swiper');
+import swiper  from "vue-awesome-swiper"
 export default ({
 	Vue,
+	options,
+	router,
+	siteData
 }) => {
-	Vue.use(VueAwesomeSwiper);
+	console.log(process,"环境")
+	Vue.use(swiper)
+	Vue.mixin({
+		 mounted(){
+			 import('vue-awesome-swiper').then( module => {
+				 Vue.use(module)
+			 }).catch(e => {
+				 console.log(e)
+			 })
+		 }
+	})
 }
