@@ -6,7 +6,10 @@
   "author": "zhjibi742626083 <jinbiao@bianjie.ai>",
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.7.1"
+    "vuepress": "^1.7.1",
+    "cross-env": "^7.0.3",
+    "vue-swipe": "^2.4.0",
+    "vue-awesome-swiper": "^2.6.7"
   },
   "scripts": {
     "dev": "vuepress dev docs",
