@@ -9,7 +9,7 @@
 		</div>
 		<div class="layout_news_list_container">
 			<ul class="layout_news_list_content_wrap">
-				<li class="layout_news_item_content" v-for="(item,index) in newsListData">
+				<li class="layout_news_item_content" v-for="(item,index) in newsListData" :key="index">
 					<div class="news_left_content">
 						<div class="news_left_top_content">
 							<div class="news_left_top_month_content">{{item.month}}</div>
@@ -24,6 +24,17 @@
 				</li>
 			</ul>
 		</div>
+		<div id="certify">
+			<swiper ref="mySwiper" :options="swiperOption" class="my-swipe">
+				<swiper-slide style="display: flex;justify-content:center;" v-for="(item ,index) in swiperArray" :key="index">
+					<div style="height: 3.2rem;margin:0 40px">
+						<img  style="display:block;height:100%;" :src="item.src" alt="">
+					</div>
+				</swiper-slide>
+				
+			</swiper>
+		</div>
+		<Content/>
 		<!--<div class="content_container">
 			<Content/>
 		</div>-->
@@ -38,12 +49,84 @@
 		components: {Navbar},
 		data () {
 			return {
-				newsList: []
+				newsList: [],
+				swiperArray:[
+					{
+						src:require('../../../img/logo.png')
+					},
+					{
+						src:require('../../../img/logo.png')
+					}
+				],
+				swiperOption:{
+					watchSlidesProgress: true,
+					slidesPerView: "auto",
+					centeredSlides: true,
+					loop: true,
+					speed: 3000,
+					// loopedSlides: 12,
+					autoplay: true,
+					/*autoplay: {
+					delay: 0,
+					stopOnLastSlide: false,
+					disableOnInteraction: true,
+					},*/
+					// grabCursor: true,
+					pagination: {
+						el: '.swiper-pagination',
+						// clickable :true,
+					},
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev',
+					},
+					on:{
+						progress: function(progress) {
+							// for (let i = 0; i < this.slides.length; i++) {
+							// 	var slide = this.slides.eq(i);
+							// 	var slideProgress = this.slides[i].progress;
+							// 	let modify = 1;
+							// 	if (Math.abs(slideProgress) > 1) {
+							// 		modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
+							// 	}
+							// 	let translate = slideProgress * modify * 260 + 'px';
+							// 	let scale = 1 - Math.abs(slideProgress) / 5;
+							// 	let zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+							// 	slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+							// 	slide.css('zIndex', zIndex);
+							// 	slide.css('opacity', 1);
+							// 	if (Math.abs(slideProgress) > 3) {
+							// 		slide.css('opacity', 0);
+							// 	}
+							// }
+						},
+						setTransition: function(transition) {
+							for (var i = 0; i < this.slides.length; i++) {
+								var slide = this.slides.eq(i);
+								slide.transition(transition);
+							}
+							
+						}
+				}
 			}
+		}
+		},
+		mounted(){
+			let swiper = document.getElementsByClassName('swiper-wrapper')[0];
+			if (swiper) {
+				swiper.style.alignItems = 'center';
+			}
+			console.log(swiper,">>>>>>>>")
+			console.log(this,"！！！")
+			console.log(this.$frontmatter,">>>>>>>>")
+			console.log(this.$page.frontmatter.features)
 		},
 		computed: {
 			newsListData(){
 				return this.$page.frontmatter.features
+			},
+			swiperArray(){
+				return this.$frontmatter.swiper
 			},
 			shouldShowNavbar () {
 				const { themeConfig } = this.$site
@@ -191,5 +274,37 @@
 		}
 	}
 	
+	#certify {
+		position: relative;
+		max-width: 900px;
+		width: 100%;
+		margin: 0 auto;
+		padding-bottom: 0.6rem;
+		height: 1000px
+		.swiper-pagination {
+			position: static;
+			display: none;
+		}
+		
+		.my-swipe {
+			&:first-child {
+				display: flex;
+				align-items: center;
+			}
+			margin-left: auto;
+			margin-right: auto;
+			position: relative;
+			overflow: hidden;
+			list-style: none;
+			padding: 0;
+			z-index: 1;
+			
+			.swiper-slide {
+				width: auto !important;
+				
+			}
+			
+		}
+	}
 	
 </style>

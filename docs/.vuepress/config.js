@@ -1,10 +1,10 @@
-
-
-
 module.exports = {
 	title: 'IRIS',
 	description: 'Just playing around',
-	base:'/blog/',
+	base:'/',
+	head:[
+		['link', { rel: 'icon', href: '/favicon.ico' }]
+	],
 	locales: {
 		'/': {
 			lang: 'English', // 将会被设置为 <html> 的 lang 属性
@@ -22,19 +22,21 @@ module.exports = {
 	},
 	
 	themeConfig: {
+		logo:"/assets/img/information.svg",
+		
 		locales: {
 			'/': {
 				selectText: 'Languages',
 				nav:[
 					{text:'Home',link:'/'},
-					{text:'news',link:'/TEST/'},
+					{text:'news',link:'/test/'},
 				]
 			},
 			'/zh/': {
 				selectText: '选择语言',
 				nav:[
 					{text:'首页',link:'/'},
-					{text:'动态资讯',link:'/zh/TEST/'},
+					{text:'动态资讯',link:'/zh/test/'},
 				]
 			}
 		}

@@ -8,7 +8,7 @@ features:
   month: Nov
   day: 9
   details: 边界智能、分布科技与区块链服务网络BSN达成战略合作，于 2020 年 10 月 31 日，在 BSN 跨链通信枢纽（Interchain Communications Hub）中各自适配完成了 IRITA Hub 和 Poly Enterprise 这两种跨链服务并在 BSN 测试网上线。
-- title: IRITA Hub 跨链服务枢纽成功上线 BSN 平台 （英文）
+- title: IRITA Hub 跨链服务枢纽成功上线 BSN 平台（英文）link:123
   link: https://mp.weixin.qq.com/s/nDQvQLaGdHqjBgTZnXEEXw
   year: 2020
   month: Oct
@@ -26,17 +26,13 @@ features:
   month: Sep
   day: 30
   details: 边界智能获授江西移动 BSN「金牌合作伙伴」，联合创始人曹恒发表主题为《IRITA Hub：新基建中的跨链服务枢纽——打造 BSN 支持隐私保护的跨链服务基础设施》的演讲。
-- title: 边界智能与中诚区块链研究院达成战略合作
-  link: https://mp.weixin.qq.com/s/t-VkHcTWrvmr0jNaO__uuQ
-  year: 2020
-  month: Sep
-  day: 15
-  details: 边界智能与中诚区块链研究院建立了战略合作关系，将聚焦区块链“产、学、研”领域，将围绕央行数字货币（CBDC），证券化通证发行（STO），大数据，以及企业区块链应用等方面展开合作。
+
 ---
 
 ::: slot title
   News
 :::
 
-   
+
+
    
