@@ -27,7 +27,7 @@
 		<div id="certify">
 			<swiper ref="mySwiper" :options="swiperOption" class="my-swipe">
 				<swiper-slide style="display: flex;justify-content:center;" v-for="(item ,index) in swiperArray" :key="index">
-					<div style="height: 3.2rem;margin:0 40px">
+					<div style="height: 3.2rem;margin:0 40px;">
 						<img  style="display:block;height:100%;" :src="item.src" alt="">
 					</div>
 				</swiper-slide>
@@ -56,6 +56,12 @@
 					},
 					{
 						src:require('../../../img/logo.png')
+					},
+					{
+						src:require('../../../img/logo.png')
+					},
+					{
+						src:require('../../../img/logo.png')
 					}
 				],
 				swiperOption:{
@@ -63,7 +69,7 @@
 					slidesPerView: "auto",
 					centeredSlides: true,
 					loop: true,
-					speed: 3000,
+					speed: 1000,
 					// loopedSlides: 12,
 					autoplay: true,
 					/*autoplay: {
@@ -284,6 +290,9 @@
 		}
 		
 		.my-swipe {
+			/deep/ .swiper-wrapper{
+				display flex !important
+			}
 			&:first-child {
 				display: flex;
 				align-items: center;
