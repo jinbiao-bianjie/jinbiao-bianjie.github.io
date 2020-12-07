@@ -1,4 +1,4 @@
-export default ({
+export default async ({
 	Vue,
 	options,
 	router,
@@ -6,7 +6,7 @@ export default ({
 	isServer,
 }) => {
 	if(!isServer){
-		import('vue-awesome-swiper').then( module => {
+		await import('vue-awesome-swiper').then( module => {
 			Vue.use(module.default)
 		}).catch(e => {
 			console.log()
