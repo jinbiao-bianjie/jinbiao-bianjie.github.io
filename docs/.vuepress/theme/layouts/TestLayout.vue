@@ -31,7 +31,7 @@
 						<img  style="display:block;height:100%;" :src="item.src" alt="">
 					</div>
 				</swiper-slide>
-				
+			
 			</swiper>
 		</div>
 		<Content/>
@@ -111,16 +111,12 @@
 			}
 		}
 		},
+		
 		mounted(){
-			let swiper = document.getElementsByClassName('swiper-wrapper')[0];
+			let swiper = document.getElementsByClassName('mySwiper')[0];
 			if (swiper) {
 				swiper.style.alignItems = 'center';
 			}
-			import('vue-awesome-swiper').then(module => {
-				console.log(module,"引入模块数据")
-				this.swiperComponents = module.default
-			})
-			console.log(swiper,">>>>>>>>")
 			console.log(this,"！！！")
 			console.log(this.$frontmatter,">>>>>>>>")
 			console.log(this.$page.frontmatter.features)
