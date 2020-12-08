@@ -15,3 +15,4 @@ features:
 footer: MIT Licensed | Copyright © 2018-present Evan You
 
 ---
+[区块链学习文档](/blockchain.md)
