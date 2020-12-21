@@ -29,6 +29,7 @@ module.exports = {
 				nav:[
 					{text:'Home',link:'/'},
 					{text:'news',link:'/test/'},
+					{text:'download',link:'/download/'},
 				]
 			},
 			'/zh/': {
@@ -36,6 +37,7 @@ module.exports = {
 				nav:[
 					{text:'首页',link:'/'},
 					{text:'动态资讯',link:'/zh/test/'},
+					{text:'download',link:'/download/'},
 				]
 			}
 		}
