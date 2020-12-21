@@ -1,6 +1,6 @@
 <template>
 	<div class="paf-container">
-		<iframe src="/Bianjie.ai_brochure.pdf" width="99.9%" height="99%"></iframe>
+		<iframe src="/blog/Bianjie.ai_brochure.pdf" width="99.9%" height="99%"></iframe>
 	</div>
 </template>
 
