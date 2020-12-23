@@ -3,7 +3,8 @@ module.exports = {
 	description: 'Just playing around',
 	base:'/blog/',
 	head:[
-		['link', { rel: 'icon', href: '/favicon.ico' }]
+		['link', { rel: 'icon', href: '/favicon.ico' }],
+		['meta', { name: 'keywords', content: 'jin,jin的博客,jin全栈' }]
 	],
 	locales: {
 		'/': {
