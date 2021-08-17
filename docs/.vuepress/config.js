@@ -30,6 +30,7 @@ module.exports = {
 				nav:[
 					{text:'Home',link:'/'},
 					{text:'news',link:'/test/'},
+					{text:'git',link:'/git/'},
 					{text:'download',link:'/download/'},
 				]
 			},
@@ -38,6 +39,7 @@ module.exports = {
 				nav:[
 					{text:'首页',link:'/'},
 					{text:'动态资讯',link:'/zh/test/'},
+					{text:'git',link:'/zh/git/'},
 					{text:'download',link:'/download/'},
 				]
 			}
